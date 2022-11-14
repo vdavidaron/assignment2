@@ -10,6 +10,7 @@ app.get('/echo/:id', (req, res) => {
   res.json({ id : req.params.id});
 })
 
+app.use(express.static('public'))
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
